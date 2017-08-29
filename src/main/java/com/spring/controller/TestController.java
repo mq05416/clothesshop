@@ -215,12 +215,15 @@ public class TestController {
 		 * mailService.sendEmail(orderdetails);
 		 */
 
-		Rating rating = new Rating();
-		/* rating.setId(1); */
-		rating.setProductId(1);
-		rating.setRating(3);
+		/*
+		 * Rating rating = new Rating(); rating.setId(1);
+		 * rating.setProductId(1); rating.setRating(3);
+		 * 
+		 * ratingService.addRating(rating);
+		 */
 
-		ratingService.addRating(rating);
+		String filepath = System.getenv("OPENSHIFT_DATA_DIR");
+		System.out.println("File Path Openshift Data Dir: " + filepath);
 
 		return
 		/* this.personService.listPersons().toString(); */
@@ -256,8 +259,8 @@ public class TestController {
 		/* "orderreview"; */
 
 		/* "admin_report"; */
-		 "test"; 
-		/*"mail";*/
+		"test";
+		/* "mail"; */
 		/* this.producttypeService.listProductType().toString(); */
 		/* this.producttypeService.getProducttypeById(2).toString(); */
 
