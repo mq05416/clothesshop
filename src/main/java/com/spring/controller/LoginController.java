@@ -153,7 +153,7 @@ public class LoginController {
 					+ user.getPassword() + "\n" + "------------------------\n"
 
 					+ "Please click this link to activate your account: \n"
-					+ "http://localhost:8080/clothesshop/verify?email=" + user.getEmail() + "&uuid=" + uuid;
+					+ "http://test111-luannvaptech2015.rhcloud.com/verify?email=" + user.getEmail() + "&uuid=" + uuid;
 
 			;
 
@@ -238,7 +238,7 @@ public class LoginController {
 					+ user.getPassword() + "\n" + "------------------------\n"
 
 					+ "Please click this link to activate your account again: \n"
-					+ "http://localhost:8080/clothesshop/verify?email=" + user.getEmail() + "&uuid=" + uuid;
+					+ "http://test111-luannvaptech2015.rhcloud.com/verify?email=" + user.getEmail() + "&uuid=" + uuid;
 
 			;
 
