@@ -21,9 +21,9 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileUploadController {
 	private static final Logger logger = LoggerFactory.getLogger(FileUploadController.class);
 
-	
 	@Autowired
 	ResourceLoader resourceLoader;
+
 	/**
 	 * Upload single file using Spring Controller
 	 */
@@ -39,13 +39,18 @@ public class FileUploadController {
 				System.out.println("Content Type: " + contentType);
 				// Creating the directory to store file
 				/* duong dan 1 */
+
+				//String rootPath = System.getProperty("catalina.home");
 				
-				 String rootPath = System.getProperty("catalina.home"); File
-				 dir = new File(rootPath + File.separator + "images");
-				 System.out.println(dir.getAbsolutePath());
-				 
+				String rootPath=System.getenv("OPENSHIFT_DATA_DIR");
+				File dir = new File(rootPath + File.separator + "images");
+				System.out.println(dir.getAbsolutePath());
+
 				/* duong dan 2 */
-				/*File dir = new File("D:" + File.separator + "clothesshopimages");*/
+				/*
+				 * File dir = new File("D:" + File.separator +
+				 * "clothesshopimages");
+				 */
 
 				if (!dir.exists())
 					dir.mkdirs();
@@ -63,23 +68,23 @@ public class FileUploadController {
 			return "You failed to upload " + name + " because the file was empty.";
 		}
 	}
-	
-	
+
 	@RequestMapping(value = "/uploadFile1", method = RequestMethod.POST)
 	public @ResponseBody String uploadFileHandler1(@RequestParam("name") String name,
 			@RequestParam("file") MultipartFile file) {
-		
+
 		if (!file.isEmpty()) {
 			try {
-	            file.transferTo(resourceLoader.getResource("resources/images/"+name+".png").getFile());
-	            System.out.println(resourceLoader.getResource("resources/images/"+name+".png").getFile().getAbsolutePath());
-	        } catch (Exception e) {
-	            throw new RuntimeException("Product Image saving failed", e);
-	        }
-		}else {
+				file.transferTo(resourceLoader.getResource("resources/images/" + name + ".png").getFile());
+				System.out.println(
+						resourceLoader.getResource("resources/images/" + name + ".png").getFile().getAbsolutePath());
+			} catch (Exception e) {
+				throw new RuntimeException("Product Image saving failed", e);
+			}
+		} else {
 			return "You failed to upload " + name + " because the file was empty.";
 		}
 		return null;
-		
+
 	}
 }
