@@ -112,7 +112,7 @@
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
 							<li>
-								<a href="${pageContext.request.contextPath}">Home</a>
+								<a href="${pageContext.request.contextPath}/">Home</a>
 							</li>
 							<!-- Mega Menu -->
 							<li class="dropdown active">

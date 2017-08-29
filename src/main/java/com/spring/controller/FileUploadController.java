@@ -40,9 +40,10 @@ public class FileUploadController {
 				// Creating the directory to store file
 				/* duong dan 1 */
 
-				//String rootPath = System.getProperty("catalina.home");
-				
-				String rootPath=System.getenv("OPENSHIFT_DATA_DIR");
+				// String rootPath = System.getProperty("catalina.home");
+
+				String rootPath = System.getenv("OPENSHIFT_DATA_DIR");
+				System.out.println("Root Path 123: " + rootPath);
 				File dir = new File(rootPath + File.separator + "images");
 				System.out.println(dir.getAbsolutePath());
 
