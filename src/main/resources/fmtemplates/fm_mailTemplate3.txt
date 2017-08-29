@@ -1,0 +1,13 @@
+<#ftl encoding='UTF-8'>
+<html>
+
+    <body>
+    <table border=1>
+    </table>
+    
+        <#list orderdetails as orderdetail>
+        	<tr><td>${orderdetail.product.id}<td>${orderdetail.product.name}
+  			
+		</#list>
+    </body>
+</html>
