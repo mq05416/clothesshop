@@ -20,7 +20,7 @@
 	<!-- Load css, js, images -->
 	<resources mapping="/resources/**" location="/resources/" />
 	<resources mapping="/images/**"
-		location="file:D:\\TOMCAT\\apache-tomcat-8.0.43\\images\\" />
+		location="file:/var/lib/openshift/59a4ded20c1e66b869000008/jbossews/images/" />
 
 
 	<!-- <resources mapping="/images/**" location="/resources/images/" /> -->
