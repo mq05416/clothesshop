@@ -599,7 +599,7 @@ public class AdminController {
 		Connection connection = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/clothesshop_v5", "root", "");
+			connection = DriverManager.getConnection("jdbc:mysql://127.11.61.2:3306/test111", "adminteZSTbr", "b_uADc_ct2ar");
 		} catch (SQLException e) {
 			e.printStackTrace();
 

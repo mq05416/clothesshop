@@ -69,7 +69,7 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<Product> getProductListByProductTypeId(int productTypeId) {
 		Session session = this.sessionFactory.getCurrentSession();
 		SQLQuery qry = session.createSQLQuery(
-				"SELECT * FROM clothesshop_v5.product p1 INNER JOIN clothesshop_v5.producttype p2 ON p1.Id_ProductType = p2.Id WHERE p2.Id = '"
+				"SELECT * FROM test111est111.product p1 INNER JOIN test111est111.producttype p2 ON p1.Id_ProductType = p2.Id WHERE p2.Id = '"
 						+ productTypeId + "'")
 				.addEntity(Product.class);
 		List<Product> products = qry.list();
@@ -109,14 +109,14 @@ public class ProductDAOImpl implements ProductDAO {
 		/*
 		 * Session session = HibernateUtil.getSessionFactory().openSession();
 		 * SQLQuery qry =
-		 * session.createSQLQuery("select * from clothesshop_v5.product").
+		 * session.createSQLQuery("select * from test111.product").
 		 * addEntity(Product.class); List<Product> products = qry.list(); return
 		 * products;
 		 */
 
 		Session session = this.sessionFactory.getCurrentSession();
 		SQLQuery qry = session.createSQLQuery(
-				"SELECT * FROM clothesshop_v5.product p1 INNER JOIN clothesshop_v5.producttype p2 ON p1.Id_ProductType = p2.Id WHERE p2.Name = '"
+				"SELECT * FROM test111.product p1 INNER JOIN test111.producttype p2 ON p1.Id_ProductType = p2.Id WHERE p2.Name = '"
 						+ productTypeName + "'")
 				.addEntity(Product.class);
 		List<Product> products = qry.list();
