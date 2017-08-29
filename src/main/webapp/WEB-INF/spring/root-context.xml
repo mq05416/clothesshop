@@ -26,10 +26,10 @@
 		destroy-method="close">
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<beans:property name="url"
-			value="jdbc:mysql://localhost:3306/clothesshop_v5?autoReconnect=true&amp;useUnicode=true&amp;createDatabaseIfNotExist=true&amp;characterEncoding=utf-8" />
+			value="jdbc:mysql://127.11.61.2:3306/test111?autoReconnect=true&amp;useUnicode=true&amp;createDatabaseIfNotExist=true&amp;characterEncoding=utf-8" />
 
-		<beans:property name="username" value="root" />
-		<beans:property name="password" value="" />
+		<beans:property name="username" value="adminteZSTbr" />
+		<beans:property name="password" value="b_uADc_ct2ar" />
 	</beans:bean>
 
 	<!-- Hibernate 4 SessionFactory Bean definition -->
