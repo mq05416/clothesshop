@@ -65,7 +65,7 @@
 				<h3>Categories</h3>
 				<ul class="cate">
 					<li>
-						<a href="#">Men</a>
+						<a href="">Men</a>
 						<span></span>
 					</li>
 					<ul>
@@ -81,7 +81,7 @@
 
 
 					<li>
-						<a href="#">Women</a>
+						<a href="">Women</a>
 						<span></span>
 					</li>
 					<ul>
@@ -99,7 +99,7 @@
 					</ul>
 
 					<li>
-						<a href="#">Kids</a>
+						<a href="">Kids</a>
 						<span></span>
 					</li>
 					<ul>
