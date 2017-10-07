@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.ui.freemarker.FreeMarkerConfigurationFactoryBean;
-
+//nguyen viet luan
 @SuppressWarnings("deprecation")
 @Configuration
 @ComponentScan(basePackages = "com.spring")
